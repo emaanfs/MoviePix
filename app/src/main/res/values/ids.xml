@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="movie_cover_image_view" type="id" />
+    <item name="section_1" type="id" />
+</resources>

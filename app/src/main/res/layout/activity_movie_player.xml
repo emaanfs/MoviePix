@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="17dp"
+    android:gravity="center_horizontal"
+    tools:context=".MoviePlayerActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now Showing"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="17dp" />
+
+
+    <ImageView
+        android:id="@+id/movie_cover_image_view"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:layout_width="402dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/fadein" />
+
+    <ImageView
+        android:id="@+id/player_view"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/playbtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="22sp"
+        tools:text="Movie name"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:id="@+id/movie_title_text_view"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="20sp"
+        tools:text="Movie subtitle"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:id="@+id/movie_subtitle_text_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:textSize="15sp"
+        tools:text="Movie summary"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:id="@+id/movie_summary_text_view"/>
+
+
+
+</LinearLayout>
