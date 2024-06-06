@@ -18,7 +18,7 @@ class CategoryAdapter (private val categoryList : List<CategoryModel> ) :
         RecyclerView.ViewHolder(binding.root){
             //bind data with the view
             fun bindData(category : CategoryModel){
-                binding.nameTextView.text = category.name
+                //binding.nameTextView.text = category.name
                 Glide.with(binding.coverImageView).load(category.coverUrl)
                     .apply(
                         RequestOptions().transform(RoundedCorners(33))

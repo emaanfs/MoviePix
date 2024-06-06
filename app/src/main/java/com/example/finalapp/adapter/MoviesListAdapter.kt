@@ -1,5 +1,6 @@
 package com.example.finalapp.adapter
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,22 +18,25 @@ class MoviesListAdapter (private val movieIdList : List<String>) :
 
     class MyViewHolder(private val binding: MovieListItemRecyclerRowBinding) : RecyclerView.ViewHolder(binding.root){
         // bind data with view
-        fun bindData(movieId: String){
+        fun bindData(movieId: String, context: Context){
 
             FirebaseFirestore.getInstance().collection("movies")
                 .document(movieId).get()
-                .addOnSuccessListener {
-                    val movie = it.toObject(MovieModel::class.java)
+                .addOnSuccessListener {documentSnapshot->
+                    val movie = documentSnapshot.toObject(MovieModel::class.java)
                     movie?.apply{
                         binding.movieTitleTextView.text = title
                         binding.movieSubtitleTextView.text = subtitle
                         Glide.with(binding.movieCoverImageView).load(coverUrl)
                             .apply(
-                                RequestOptions().transform(RoundedCorners(32))
+                                RequestOptions().transform(RoundedCorners(33))
                             )
                             .into(binding.movieCoverImageView)
+                        val context =  binding.root.context
                         binding.root.setOnClickListener{
-                            it.context.startActivity(Intent(it.context,MoviePlayerActivity::class.java))
+                            val intent = Intent(context, MoviePlayerActivity::class.java)
+                            intent.putExtra("movieId", movieId)
+                            context.startActivity(intent)
                         }
                     }
                 }
@@ -49,6 +53,6 @@ class MoviesListAdapter (private val movieIdList : List<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bindData(movieIdList[position])
+        holder.bindData(movieIdList[position],holder.itemView.context)
     }
 }

@@ -7,6 +7,12 @@ data class MovieModel(
     val url : String,
     val coverUrl : String,
     val summary : String,
+    val genre : String,
+    val poster : String,
+    val actor : String,
+    val actor2 : String,
+    val actor3 : String,
+    val actor4 : String,
 ) {
-    constructor() : this("", "", "", "", "","")
+    constructor() : this("", "", "", "", "","","","","","","","")
 }

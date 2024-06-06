@@ -9,20 +9,11 @@
     
     <ImageView
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:scaleType="fitXY"
         android:id="@+id/cover_image_view">
 
     </ImageView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/name_text_view"
-        android:layout_marginTop="7dp"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        tools:text="Action">
-    </TextView>
 
 </LinearLayout>
