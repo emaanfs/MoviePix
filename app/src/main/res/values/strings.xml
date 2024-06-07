@@ -8,4 +8,6 @@
     <string name="step_3">Step 3:</string>
     <string name="step_2">Step 2:</string>
     <string name="step_1">Step 1:</string>
+    <string name="bgimage">bgimage</string>
+    <string name="bgimagestyle">bgimagestyle</string>
 </resources>

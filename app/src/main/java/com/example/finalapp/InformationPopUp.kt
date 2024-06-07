@@ -3,9 +3,9 @@ package com.example.finalapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class InfoPopUp : AppCompatActivity() {
+class InformationPopUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info_pop_up)
+        setContentView(R.layout.activity_information_pop_up)
     }
 }

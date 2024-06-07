@@ -14,26 +14,31 @@
         android:id="@+id/toolbar">
 
         <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            app:srcCompat="@drawable/logo"
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            app:srcCompat="@drawable/iconn"
             android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Main Menu"
             android:textColor="#DDDDDD"
-            android:textSize="24sp"
+            android:textSize="27sp"
             android:gravity="center"/>
 
-        <ImageView
-            android:layout_width="47dp"
-            android:layout_height="47dp"
-            app:srcCompat="@drawable/info"
+        <ImageButton
+            android:id="@+id/infobtn"
+            android:layout_width="61dp"
+            android:layout_height="59dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:id="@+id/infobtn"/>
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/info"
+            android:contentDescription="informationbtn" />
 
 
     </RelativeLayout>

@@ -27,9 +27,6 @@ class MovieListActivity : AppCompatActivity() {
 
         binding.nameTextView.text = category.name  // extracting name of the genres on first page to this activity
         Glide.with(binding.categoryCoverImageView).load(category.categoryUrl) // for extracting image to this activity
-            .apply(
-                RequestOptions().transform(RoundedCorners(33))
-            )
             .into(binding.categoryCoverImageView)
 
         setupMoviesListRecyclerView()
